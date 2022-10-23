@@ -1,0 +1,15 @@
+<h1> <%= @writing.title %> </h1>
+
+<div> 
+  <%= link_to "Edit Writing",
+  edit_writing_path(@writing) %>
+</div>
+
+<div>
+  <%= link_to "Destroy", writing_path(@writing),
+    data: {
+      turbo_method: :delete,
+      turbo_confirm: "Are you sure?"
+    }
+  %>
+</div>
