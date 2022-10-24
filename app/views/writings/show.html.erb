@@ -1,5 +1,11 @@
 <h1> <%= @writing.title %> </h1>
 
+<% if @writing.w_file.attached? %>
+  <div>
+    <iframe src="<%= rails_blob_path(@writing.w_file, disposition: :inline) %>"></iframe>
+  </div>
+<% end %>
+
 <div> 
   <%= link_to "Edit Writing",
   edit_writing_path(@writing) %>

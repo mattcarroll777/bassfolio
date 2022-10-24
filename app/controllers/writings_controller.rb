@@ -44,7 +44,7 @@ class WritingsController < ApplicationController
   
   private
     def writing_params
-      params.require(:writing).permit(:title, :logline)
+      params.require(:writing).permit(:title, :logline, :w_file, :remove_w_file)
     end
 
 end

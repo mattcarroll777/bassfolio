@@ -1,15 +1,14 @@
 <h1> Hello World </h1>
 
-<ul>
-  <% @writings.each do | w | %>
-    <li>
-      <a href="<%= writing_path(w) %>">
-        <%= w.title %>
-        :
-        <%= w.logline %>
-      <a>
-    </li>
+<% @writings.each do | w | %>
+  <div>
+    <a href="<%= writing_path(w) %>">
+      <%= w.title %>
+      :
+      <%= w.logline %>
+    <a>
+  </div>
   <% end %>
-</ul>
+
 
 <%= link_to "Add Writing", new_writing_path %>

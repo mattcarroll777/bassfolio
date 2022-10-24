@@ -16,6 +16,16 @@
   </div>
 
   <div>
+      <%= form.label :PDF %><br>
+      <%= form.file_field :w_file %>
+
+      <% if @writing.w_file.attached? %>
+        <%= form.label :remove_w_file %>
+        <%= form.check_box :remove_w_file %>
+      <% end %>
+  </div>
+
+  <div>
     <%= form.submit %>
   </div>
 <% end %>
